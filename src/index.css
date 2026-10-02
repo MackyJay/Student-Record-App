@@ -1,0 +1,144 @@
+:root {
+  --espresso: #2a1b15;
+  --roast: #3b2a21;
+  --mocha: #4e382c;
+  --mocha-border: #6b4d3c;
+  --latte: #f3e6d6;
+  --foam: #d9c4ab;
+  --caramel: #c88a4a;
+  --caramel-dark: #a96f35;
+  --pass: #a8cf94;
+  --fail: #eba08f;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--espresso);
+  color: var(--latte);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--foam);
+  display: flex;
+  justify-content: center;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+
+input,
+select {
+  background: var(--roast);
+  color: var(--latte);
+  border: 1px solid var(--mocha-border);
+}
+
+input::placeholder {
+  color: var(--foam);
+  opacity: 0.6;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--caramel);
+  outline-offset: 1px;
+}
+
+button {
+  background: var(--caramel);
+  color: var(--espresso);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--caramel-dark);
+}
+
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--roast);
+  border: 1px solid var(--mocha-border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 24px;
+}
+
+.student-form h2 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  color: var(--foam);
+}
+
+.score-row {
+  display: flex;
+  gap: 8px;
+}
+
+.score-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--fail);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.controls input {
+  flex: 1 1 200px;
+}
+
+.student-card {
+  background: var(--mocha);
+  border: 1px solid var(--mocha-border);
+  border-left: 5px solid var(--caramel);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.student-card h3 {
+  margin: 0 0 8px;
+  color: var(--latte);
+}
+
+.student-card p {
+  margin: 4px 0;
+  color: var(--foam);
+}
+
+.status-passed {
+  color: var(--pass);
+  font-weight: bold;
+}
+
+.status-failed {
+  color: var(--fail);
+  font-weight: bold;
+}
